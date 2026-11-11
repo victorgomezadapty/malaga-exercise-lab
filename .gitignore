@@ -1,0 +1,12 @@
+# Deposited CSV files: local only, never committed or redistributed (see DATA_LICENSE.md)
+data/raw/subject-info.csv
+data/raw/test_measure.csv
+data/raw/*.csv
+data/raw/*.part
+*.csv.part
+# Environment and caches
+.venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+.ipynb_checkpoints/

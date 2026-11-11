@@ -1,0 +1,10 @@
+flag,severity,item,detail
+A1,main,Gas missingness differs from the page,"Page: VO2, VCO2 and VE missing for 30 tests. Files: VO2 and VCO2 fully missing in 11 tests (4871 rows), VE present in every row. Not corrected; gas analyses use tests with VO2."
+A2,main,GET index is not a consecutive test count,"Page: the GET index counts the tests of a person (its example is the third test). Files: every person has index 1, but later indices are not a running count (largest index 371; 111 of 116 repeat testers have an index above their number of tests). Ordering is consistent with age, so the lowest index is used as the first test."
+A3,main,Minors are included,"145 tests are under 18 (youngest 10.8); page states 10 to 63. Excluded from the primary family, described separately, never shown at row level."
+A4,minor,Humidity and temperature missing,"30 rows each, the same rows; not mentioned on the page; no overlap with gas missing tests (0). Not used in the primary analysis."
+A5,minor,Heart rate artefacts,981 HR values missing and 53 values below 30 bpm (including 1 zero). Values below 30 bpm are set to missing in memory before peaks.
+A6,minor,Column order in test_measure.csv,Files list ID_test before ID; page lists ID before ID_test. No effect.
+A7,minor,Sex coding,"Sex takes values [0, 1]; 1 is female per the page; consistent within person: True."
+A8,minor,Breath sampling gaps,Time is increasing within every test; the largest gap between samples is 61 s. Zone time weights are capped at 10 s.
+A9,minor,Median measures per test,"Page: 580 [484, 673]. Files: 580.5 [484, 673]; the page value looks truncated (992 tests, even count). Weight Q3 80.225 is shown as 80.23 on the page."

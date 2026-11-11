@@ -1,0 +1,14 @@
+item,deposit_page,files,match
+tests (subject-info rows),992,992,yes
+people (unique ID),857,857,yes
+test_measure rows,575087,575087,yes
+tests with Sex = 1 (female),149,149,yes
+age median [IQR],"27.1, 21.1, 36.32","27.1, 21.1, 36.325",yes
+weight median [IQR],"73, 66, 80.23","73, 66, 80.225",yes
+height median [IQR],"175, 170, 180","175, 170, 180",yes
+humidity median [IQR],"47, 42, 54","47, 42, 54",yes
+temperature median [IQR],"22.9, 20.8, 24.4","22.9, 20.8, 24.4",yes
+measures per test median [IQR],"580, 484, 673","580.5, 484, 673",no
+duration s median [IQR],"1093, 978.75, 1208","1093, 978.75, 1208",yes
+"tests with VO2, VCO2 and VE missing",30,"VO2 11, VCO2 11, VE 0",no
+age range,10 to 63 years,10.8 to 63.0,see note
