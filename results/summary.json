@@ -1,0 +1,1105 @@
+{
+  "project": "Málaga Exercise Lab",
+  "package": "malaga_exercise_lab",
+  "status": "public on GitHub",
+  "dataset": {
+    "title": "Treadmill Maximal Exercise Tests from the Exercise Physiology and Human Performance Lab of the University of Malaga",
+    "physionet_slug": "treadmill-exercise-cardioresp",
+    "version": "1.0.1",
+    "page": "https://physionet.org/content/treadmill-exercise-cardioresp/1.0.1/",
+    "version_doi": "10.13026/7ezk-j442",
+    "concept_doi": "10.13026/94yv-6145",
+    "published": "2021-12-10",
+    "creators": [
+      "Denis Mongin",
+      "Jeronimo García Romero",
+      "Jose Ramon Alvero Cruz"
+    ],
+    "citation": "Mongin, D., García Romero, J., and Alvero Cruz, J. R. (2021). Treadmill Maximal Exercise Tests from the Exercise Physiology and Human Performance Lab of the University of Malaga (version 1.0.1). PhysioNet. RRID:SCR_007345. https://doi.org/10.13026/7ezk-j442",
+    "access": "open access",
+    "license_file": "Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International Public License",
+    "project_card_license": "PhysioNet Contributor Review Health Data License 1.5.0",
+    "project_card_dua": "PhysioNet Contributor Review Health Data Use Agreement 1.5.0",
+    "license_contradiction": true,
+    "csv_redistributed": false,
+    "files_verified": {
+      "SHA256SUMS.txt": {
+        "sha256": "354d3bafbd02bdc37a3f212f44e0b024d864da271bede95af923a317bebf42aa",
+        "bytes": 241
+      },
+      "LICENSE.txt": {
+        "sha256": "92905d58fa4b1d55f2ad00ece3a8282073565d228ce888a18274ca6e556e7361",
+        "bytes": 14700
+      },
+      "subject-info.csv": {
+        "sha256": "e9ca5ba20eb1272df56c11d3e584ec3997d5484454812bd94966e58082415f16",
+        "bytes": 33045
+      },
+      "test_measure.csv": {
+        "sha256": "3b5ed5586dc7412ccdfb26f804e29c06482a2a1df2060399c2731ebc68d4613d",
+        "bytes": 23145166
+      }
+    }
+  },
+  "companion_work": [
+    {
+      "citation": "Mongin D, Chabert C, Courvoisier DS, García-Romero J, Alvero-Cruz JR. Heart rate recovery to assess fitness: comparison of different calculation methods in a large cross-sectional study. Research in Sports Medicine. 31:157-170. Published online 2021.",
+      "doi": "10.1080/15438627.2021.1954513",
+      "use": "cited only"
+    },
+    {
+      "citation": "Mongin D, Chabert C, Uribe Caparros A, Collado A, Hermand E, Hue O, et al. Validity of dynamical analysis to characterize heart rate and oxygen consumption during effort tests. Scientific Reports. 2020;10:12420.",
+      "doi": "10.1038/s41598-020-69218-1",
+      "use": "cited only"
+    },
+    {
+      "citation": "Mongin D, Chabert C, Uribe Caparros A, Vico Guzmán JF, Hue O, Alvero-Cruz JR, Courvoisier DS. The complex relationship between effort and heart rate: a hint from dynamic analysis. Physiological Measurement. 2020;41(10):105003.",
+      "doi": "10.1088/1361-6579/abbb6e",
+      "use": "cited only"
+    }
+  ],
+  "formulas": {
+    "220 minus age": {
+      "expression": "220 - age",
+      "reference": "Fox SM, Naughton JP, Haskell WL. Physical activity and the prevention of coronary heart disease. Annals of Clinical Research. 1971;3(6):404-432."
+    },
+    "Tanaka 2001": {
+      "expression": "208 - 0.7 x age",
+      "reference": "Tanaka H, Monahan KD, Seals DR. Age-predicted maximal heart rate revisited. Journal of the American College of Cardiology. 2001;37(1):153-156. https://doi.org/10.1016/S0735-1097(00)01054-8"
+    },
+    "Gellish 2007": {
+      "expression": "206.9 - 0.67 x age",
+      "reference": "Gellish RL, Goslin BR, Olson RE, McDonald A, Russi GD, Moudgil VK. Longitudinal modeling of the relationship between age and maximal heart rate. Medicine and Science in Sports and Exercise. 2007;39(5):822-829. https://doi.org/10.1097/mss.0b013e31803349c6"
+    }
+  },
+  "environment": {
+    "python": "3.13.5",
+    "pandas": "3.1.1",
+    "numpy": "2.5.4"
+  },
+  "audit": {
+    "facts": {
+      "tests": 992,
+      "people": 857,
+      "measure_rows": 575087,
+      "tests_in_measure_file": 992,
+      "id_test_sets_equal": true,
+      "id_prefix_matches_ID": true,
+      "measure_ID_matches_ID_test": true,
+      "female_tests": 149,
+      "female_people": 131,
+      "sex_values": [
+        0,
+        1
+      ],
+      "sex_consistent_within_person": true,
+      "age_min": 10.8,
+      "age_max": 63.0,
+      "tests_under_18": 145,
+      "people_with_any_test_under_18": 122,
+      "people_more_than_one_test": 116,
+      "max_tests_per_person": 5,
+      "tests_per_person_counts": {
+        "1": 741,
+        "2": 100,
+        "3": 14,
+        "4": 1,
+        "5": 1
+      },
+      "every_person_has_get_index_1": true,
+      "get_index_consecutive_within_person": false,
+      "get_index_max": 371,
+      "people_with_index_above_their_test_count": 111,
+      "age_non_decreasing_with_get_index": true,
+      "humidity_missing": 30,
+      "temperature_missing": 30,
+      "humidity_and_temperature_missing_same_rows": true,
+      "gas_tests_all_missing": {
+        "VO2": 11,
+        "VCO2": 11,
+        "VE": 0
+      },
+      "gas_rows_missing": {
+        "VO2": 4871,
+        "VCO2": 4871,
+        "VE": 0
+      },
+      "gas_tests_partially_missing": {
+        "VO2": 0,
+        "VCO2": 0,
+        "VE": 0
+      },
+      "gas_missing_overlap_with_humidity_missing": 0,
+      "hr_missing_rows": 981,
+      "hr_tests_with_missing": 326,
+      "hr_below_30_rows": 53,
+      "hr_zero_rows": 1,
+      "hr_max": 226.0,
+      "speed_max": 23.1,
+      "time_monotonic_within_test": true,
+      "max_gap_s": 61.0,
+      "measures_per_test_median_iqr": [
+        580.5,
+        484.0,
+        673.0
+      ],
+      "duration_median_iqr": [
+        1093.0,
+        978.75,
+        1208.0
+      ],
+      "age_median_iqr": [
+        27.1,
+        21.1,
+        36.324999999999996
+      ],
+      "weight_median_iqr": [
+        73.0,
+        66.0,
+        80.225
+      ],
+      "height_median_iqr": [
+        175.0,
+        170.0,
+        180.0
+      ],
+      "humidity_median_iqr": [
+        47.0,
+        42.0,
+        54.0
+      ],
+      "temperature_median_iqr": [
+        22.9,
+        20.8,
+        24.4
+      ],
+      "subject_columns_match": true,
+      "measure_columns_match": true,
+      "measure_column_order_differs_from_page": true
+    },
+    "flags": {
+      "A1": {
+        "severity": "main",
+        "item": "Gas missingness differs from the page"
+      },
+      "A2": {
+        "severity": "main",
+        "item": "GET index is not a consecutive test count"
+      },
+      "A3": {
+        "severity": "main",
+        "item": "Minors are included"
+      },
+      "A4": {
+        "severity": "minor",
+        "item": "Humidity and temperature missing"
+      },
+      "A5": {
+        "severity": "minor",
+        "item": "Heart rate artefacts"
+      },
+      "A6": {
+        "severity": "minor",
+        "item": "Column order in test_measure.csv"
+      },
+      "A7": {
+        "severity": "minor",
+        "item": "Sex coding"
+      },
+      "A8": {
+        "severity": "minor",
+        "item": "Breath sampling gaps"
+      },
+      "A9": {
+        "severity": "minor",
+        "item": "Median measures per test"
+      }
+    }
+  },
+  "effort_phase": {
+    "rule": "after last sample at warmup speed S0 + 0.05 km/h, up to last sample before speed < Vmax - 1 km/h",
+    "hr_artefact_rule": "HR below 30 bpm set to missing",
+    "hr_values_below_30": 53,
+    "hr_values_missing_in_file": 981,
+    "tests_with_hr_below_30": 38,
+    "flag_counts_all_tests": {
+      "flag_warmup_not_5kmh": 57,
+      "flag_effort_short": 2,
+      "flag_drop_inside_effort": 1,
+      "flag_no_recovery": 0,
+      "flag_recovery_not_5kmh": 15
+    },
+    "irregular_all_tests": 72,
+    "irregular_primary": 48,
+    "hrpeak_in_recovery_primary": 102
+  },
+  "samples": {
+    "primary": 735,
+    "all_adult_tests": 847,
+    "first_adult_test": 737,
+    "primary_regular_protocol": 687,
+    "under18_first_test": 122
+  },
+  "primary_sample": {
+    "definition": "first test per person (lowest GET index), age 18 or over at that test",
+    "n_tests": 735,
+    "n_people": 735,
+    "female": 102,
+    "age_range": [
+      18.0,
+      63.0
+    ],
+    "observed_hrpeak_mean": 185.7701,
+    "observed_hrpeak_sd": 10.4403
+  },
+  "primary": {
+    "220 minus age": {
+      "n_tests": 735,
+      "n_people": 735,
+      "bias_bpm": 3.0294,
+      "bias_ci95_low": 2.3047,
+      "bias_ci95_high": 3.7541,
+      "mae_bpm": 8.2248,
+      "mae_ci95_low": 7.757,
+      "mae_ci95_high": 8.6925,
+      "rmse_bpm": 10.4591,
+      "rmse_ci95_low": 9.8652,
+      "rmse_ci95_high": 11.058,
+      "n_abs_error_over_10": 224,
+      "pct_abs_error_over_10": 30.4762,
+      "pct_ci95_low": 27.2571,
+      "pct_ci95_high": 33.8983,
+      "pct_formula_above_observed": 63.5374
+    },
+    "Tanaka 2001": {
+      "n_tests": 735,
+      "n_people": 735,
+      "bias_bpm": 0.3896,
+      "bias_ci95_low": -0.2785,
+      "bias_ci95_high": 1.0576,
+      "mae_bpm": 7.1432,
+      "mae_ci95_low": 6.7192,
+      "mae_ci95_high": 7.5671,
+      "rmse_bpm": 9.237,
+      "rmse_ci95_low": 8.6454,
+      "rmse_ci95_high": 9.8296,
+      "n_abs_error_over_10": 193,
+      "pct_abs_error_over_10": 26.2585,
+      "pct_ci95_low": 23.2066,
+      "pct_ci95_high": 29.5573,
+      "pct_formula_above_observed": 52.6531
+    },
+    "Gellish 2007": {
+      "n_tests": 735,
+      "n_people": 735,
+      "bias_bpm": 0.2256,
+      "bias_ci95_low": -0.4399,
+      "bias_ci95_high": 0.891,
+      "mae_bpm": 7.1136,
+      "mae_ci95_low": 6.6918,
+      "mae_ci95_high": 7.5353,
+      "rmse_bpm": 9.195,
+      "rmse_ci95_low": 8.6267,
+      "rmse_ci95_high": 9.7993,
+      "n_abs_error_over_10": 196,
+      "pct_abs_error_over_10": 26.6667,
+      "pct_ci95_low": 23.597,
+      "pct_ci95_high": 29.9789,
+      "pct_formula_above_observed": 51.7007
+    }
+  },
+  "sensitivity": {
+    "sensitivity: primary sample, any time max HR": {
+      "220 minus age": {
+        "n_tests": 735,
+        "n_people": 735,
+        "bias_bpm": 2.5967,
+        "bias_ci95_low": 1.8726,
+        "bias_ci95_high": 3.3209,
+        "mae_bpm": 8.0854,
+        "mae_ci95_low": 7.6195,
+        "mae_ci95_high": 8.5514,
+        "rmse_bpm": 10.3347,
+        "rmse_ci95_low": 9.746,
+        "rmse_ci95_high": 10.9361,
+        "n_abs_error_over_10": 216,
+        "pct_abs_error_over_10": 29.3878,
+        "pct_ci95_low": 26.2085,
+        "pct_ci95_high": 32.7814,
+        "pct_formula_above_observed": 62.3129
+      },
+      "Tanaka 2001": {
+        "n_tests": 735,
+        "n_people": 735,
+        "bias_bpm": -0.0431,
+        "bias_ci95_low": -0.7107,
+        "bias_ci95_high": 0.6245,
+        "mae_bpm": 7.0703,
+        "mae_ci95_low": 6.6416,
+        "mae_ci95_high": 7.4989,
+        "rmse_bpm": 9.2221,
+        "rmse_ci95_low": 8.6302,
+        "rmse_ci95_high": 9.834,
+        "n_abs_error_over_10": 185,
+        "pct_abs_error_over_10": 25.1701,
+        "pct_ci95_low": 22.1672,
+        "pct_ci95_high": 28.4312,
+        "pct_formula_above_observed": 51.2925
+      },
+      "Gellish 2007": {
+        "n_tests": 735,
+        "n_people": 735,
+        "bias_bpm": -0.2071,
+        "bias_ci95_low": -0.8721,
+        "bias_ci95_high": 0.4579,
+        "mae_bpm": 7.0471,
+        "mae_ci95_low": 6.6203,
+        "mae_ci95_high": 7.4739,
+        "rmse_bpm": 9.1879,
+        "rmse_ci95_low": 8.5983,
+        "rmse_ci95_high": 9.8106,
+        "n_abs_error_over_10": 190,
+        "pct_abs_error_over_10": 25.8503,
+        "pct_ci95_low": 22.8165,
+        "pct_ci95_high": 29.1353,
+        "pct_formula_above_observed": 49.932
+      }
+    },
+    "sensitivity: primary sample, 5 sample rolling median peak": {
+      "220 minus age": {
+        "n_tests": 735,
+        "n_people": 735,
+        "bias_bpm": 3.3763,
+        "bias_ci95_low": 2.6554,
+        "bias_ci95_high": 4.0972,
+        "mae_bpm": 8.2748,
+        "mae_ci95_low": 7.8051,
+        "mae_ci95_high": 8.7445,
+        "rmse_bpm": 10.5151,
+        "rmse_ci95_low": 9.9333,
+        "rmse_ci95_high": 11.1051,
+        "n_abs_error_over_10": 222,
+        "pct_abs_error_over_10": 30.2041,
+        "pct_ci95_low": 26.9947,
+        "pct_ci95_high": 33.6193,
+        "pct_formula_above_observed": 64.7619
+      },
+      "Tanaka 2001": {
+        "n_tests": 735,
+        "n_people": 735,
+        "bias_bpm": 0.7365,
+        "bias_ci95_low": 0.0718,
+        "bias_ci95_high": 1.4011,
+        "mae_bpm": 7.1327,
+        "mae_ci95_low": 6.7108,
+        "mae_ci95_high": 7.5545,
+        "rmse_bpm": 9.2106,
+        "rmse_ci95_low": 8.6402,
+        "rmse_ci95_high": 9.769,
+        "n_abs_error_over_10": 193,
+        "pct_abs_error_over_10": 26.2585,
+        "pct_ci95_low": 23.2066,
+        "pct_ci95_high": 29.5573,
+        "pct_formula_above_observed": 54.2857
+      },
+      "Gellish 2007": {
+        "n_tests": 735,
+        "n_people": 735,
+        "bias_bpm": 0.5725,
+        "bias_ci95_low": -0.0896,
+        "bias_ci95_high": 1.2346,
+        "mae_bpm": 7.0913,
+        "mae_ci95_low": 6.6712,
+        "mae_ci95_high": 7.5114,
+        "rmse_bpm": 9.1632,
+        "rmse_ci95_low": 8.6195,
+        "rmse_ci95_high": 9.73,
+        "n_abs_error_over_10": 195,
+        "pct_abs_error_over_10": 26.5306,
+        "pct_ci95_low": 23.4668,
+        "pct_ci95_high": 29.8384,
+        "pct_formula_above_observed": 53.3333
+      }
+    },
+    "sensitivity: primary without irregular protocol flags": {
+      "220 minus age": {
+        "n_tests": 687,
+        "n_people": 687,
+        "bias_bpm": 2.8897,
+        "bias_ci95_low": 2.1392,
+        "bias_ci95_high": 3.6401,
+        "mae_bpm": 8.1808,
+        "mae_ci95_low": 7.6964,
+        "mae_ci95_high": 8.6652,
+        "rmse_bpm": 10.4294,
+        "rmse_ci95_low": 9.7719,
+        "rmse_ci95_high": 11.0864,
+        "n_abs_error_over_10": 208,
+        "pct_abs_error_over_10": 30.2766,
+        "pct_ci95_low": 26.9584,
+        "pct_ci95_high": 33.8141,
+        "pct_formula_above_observed": 63.1732
+      },
+      "Tanaka 2001": {
+        "n_tests": 687,
+        "n_people": 687,
+        "bias_bpm": 0.3551,
+        "bias_ci95_low": -0.3364,
+        "bias_ci95_high": 1.0466,
+        "mae_bpm": 7.136,
+        "mae_ci95_low": 6.6964,
+        "mae_ci95_high": 7.5756,
+        "rmse_bpm": 9.2406,
+        "rmse_ci95_low": 8.6273,
+        "rmse_ci95_high": 9.9003,
+        "n_abs_error_over_10": 180,
+        "pct_abs_error_over_10": 26.2009,
+        "pct_ci95_low": 23.0515,
+        "pct_ci95_high": 29.6149,
+        "pct_formula_above_observed": 52.5473
+      },
+      "Gellish 2007": {
+        "n_tests": 687,
+        "n_people": 687,
+        "bias_bpm": 0.2016,
+        "bias_ci95_low": -0.4871,
+        "bias_ci95_high": 0.8903,
+        "mae_bpm": 7.1069,
+        "mae_ci95_low": 6.6695,
+        "mae_ci95_high": 7.5443,
+        "rmse_bpm": 9.199,
+        "rmse_ci95_low": 8.5662,
+        "rmse_ci95_high": 9.8457,
+        "n_abs_error_over_10": 184,
+        "pct_abs_error_over_10": 26.7831,
+        "pct_ci95_low": 23.6076,
+        "pct_ci95_high": 30.2169,
+        "pct_formula_above_observed": 51.8195
+      }
+    },
+    "sensitivity: first adult test per person": {
+      "220 minus age": {
+        "n_tests": 737,
+        "n_people": 737,
+        "bias_bpm": 3.0559,
+        "bias_ci95_low": 2.3322,
+        "bias_ci95_high": 3.7796,
+        "mae_bpm": 8.2372,
+        "mae_ci95_low": 7.7704,
+        "mae_ci95_high": 8.704,
+        "rmse_bpm": 10.4665,
+        "rmse_ci95_low": 9.8759,
+        "rmse_ci95_high": 11.069,
+        "n_abs_error_over_10": 226,
+        "pct_abs_error_over_10": 30.6649,
+        "pct_ci95_low": 27.4433,
+        "pct_ci95_high": 34.087,
+        "pct_formula_above_observed": 63.6364
+      },
+      "Tanaka 2001": {
+        "n_tests": 737,
+        "n_people": 737,
+        "bias_bpm": 0.4059,
+        "bias_ci95_low": -0.2608,
+        "bias_ci95_high": 1.0726,
+        "mae_bpm": 7.1412,
+        "mae_ci95_low": 6.7183,
+        "mae_ci95_high": 7.564,
+        "rmse_bpm": 9.2308,
+        "rmse_ci95_low": 8.6691,
+        "rmse_ci95_high": 9.8607,
+        "n_abs_error_over_10": 193,
+        "pct_abs_error_over_10": 26.1872,
+        "pct_ci95_low": 23.1424,
+        "pct_ci95_high": 29.479,
+        "pct_formula_above_observed": 52.7815
+      },
+      "Gellish 2007": {
+        "n_tests": 737,
+        "n_people": 737,
+        "bias_bpm": 0.2409,
+        "bias_ci95_low": -0.4231,
+        "bias_ci95_high": 0.9049,
+        "mae_bpm": 7.1102,
+        "mae_ci95_low": 6.6895,
+        "mae_ci95_high": 7.5309,
+        "rmse_bpm": 9.1879,
+        "rmse_ci95_low": 8.6335,
+        "rmse_ci95_high": 9.7917,
+        "n_abs_error_over_10": 196,
+        "pct_abs_error_over_10": 26.5943,
+        "pct_ci95_low": 23.5318,
+        "pct_ci95_high": 29.8996,
+        "pct_formula_above_observed": 51.8318
+      }
+    },
+    "sensitivity: all adult tests, clustered by person": {
+      "220 minus age": {
+        "n_tests": 847,
+        "n_people": 737,
+        "bias_bpm": 3.0287,
+        "bias_ci95_low": 2.2886,
+        "bias_ci95_high": 3.7688,
+        "mae_bpm": 8.1968,
+        "mae_ci95_low": 7.7383,
+        "mae_ci95_high": 8.6553,
+        "rmse_bpm": 10.3544,
+        "rmse_ci95_low": 9.7574,
+        "rmse_ci95_high": 10.9524,
+        "n_abs_error_over_10": 254,
+        "pct_abs_error_over_10": 29.9882,
+        "pct_ci95_low": 26.6814,
+        "pct_ci95_high": 33.4966,
+        "pct_formula_above_observed": 63.8725
+      },
+      "Tanaka 2001": {
+        "n_tests": 847,
+        "n_people": 737,
+        "bias_bpm": 0.393,
+        "bias_ci95_low": -0.2797,
+        "bias_ci95_high": 1.0658,
+        "mae_bpm": 7.0412,
+        "mae_ci95_low": 6.6193,
+        "mae_ci95_high": 7.463,
+        "rmse_bpm": 9.1078,
+        "rmse_ci95_low": 8.5386,
+        "rmse_ci95_high": 9.6712,
+        "n_abs_error_over_10": 219,
+        "pct_abs_error_over_10": 25.856,
+        "pct_ci95_low": 22.8701,
+        "pct_ci95_high": 28.8949,
+        "pct_formula_above_observed": 53.1287
+      },
+      "Gellish 2007": {
+        "n_tests": 847,
+        "n_people": 737,
+        "bias_bpm": 0.2295,
+        "bias_ci95_low": -0.44,
+        "bias_ci95_high": 0.899,
+        "mae_bpm": 7.0023,
+        "mae_ci95_low": 6.5814,
+        "mae_ci95_high": 7.4233,
+        "rmse_bpm": 9.0642,
+        "rmse_ci95_low": 8.5087,
+        "rmse_ci95_high": 9.6438,
+        "n_abs_error_over_10": 221,
+        "pct_abs_error_over_10": 26.0921,
+        "pct_ci95_low": 22.9387,
+        "pct_ci95_high": 29.2478,
+        "pct_formula_above_observed": 52.1842
+      }
+    }
+  },
+  "under18_descriptive": {
+    "220 minus age": {
+      "n_tests": 122,
+      "n_people": 122,
+      "bias_bpm": 8.7115,
+      "bias_ci95_low": 7.1487,
+      "bias_ci95_high": 10.2743,
+      "mae_bpm": 9.6148,
+      "mae_ci95_low": 8.2319,
+      "mae_ci95_high": 10.9976,
+      "rmse_bpm": 12.3364,
+      "rmse_ci95_low": 10.6228,
+      "rmse_ci95_high": 14.1467,
+      "n_abs_error_over_10": 50,
+      "pct_abs_error_over_10": 40.9836,
+      "pct_ci95_low": 32.6618,
+      "pct_ci95_high": 49.8559,
+      "pct_formula_above_observed": 87.7049
+    },
+    "Tanaka 2001": {
+      "n_tests": 122,
+      "n_people": 122,
+      "bias_bpm": 1.5243,
+      "bias_ci95_low": -0.0328,
+      "bias_ci95_high": 3.0813,
+      "mae_bpm": 6.8334,
+      "mae_ci95_low": 5.8314,
+      "mae_ci95_high": 7.8355,
+      "rmse_bpm": 8.8354,
+      "rmse_ci95_low": 7.3289,
+      "rmse_ci95_high": 10.471,
+      "n_abs_error_over_10": 28,
+      "pct_abs_error_over_10": 22.9508,
+      "pct_ci95_low": 16.3831,
+      "pct_ci95_high": 31.1699,
+      "pct_formula_above_observed": 51.6393
+    },
+    "Gellish 2007": {
+      "n_tests": 122,
+      "n_people": 122,
+      "bias_bpm": 0.9055,
+      "bias_ci95_low": -0.6511,
+      "bias_ci95_high": 2.4622,
+      "mae_bpm": 6.8115,
+      "mae_ci95_low": 5.8295,
+      "mae_ci95_high": 7.7935,
+      "rmse_bpm": 8.7477,
+      "rmse_ci95_low": 7.3135,
+      "rmse_ci95_high": 10.2858,
+      "n_abs_error_over_10": 26,
+      "pct_abs_error_over_10": 21.3115,
+      "pct_ci95_low": 14.979,
+      "pct_ci95_high": 29.3954,
+      "pct_formula_above_observed": 51.6393
+    }
+  },
+  "subgroups_descriptive": {
+    "age_band=18 to 29": {
+      "220 minus age": {
+        "n_tests": 380,
+        "n_people": 380,
+        "bias_bpm": 6.4979,
+        "bias_ci95_low": 5.6159,
+        "bias_ci95_high": 7.3799,
+        "mae_bpm": 8.8053,
+        "mae_ci95_low": 8.1579,
+        "mae_ci95_high": 9.4526,
+        "rmse_bpm": 10.898,
+        "rmse_ci95_low": 10.1303,
+        "rmse_ci95_high": 11.6751,
+        "n_abs_error_over_10": 129,
+        "pct_abs_error_over_10": 33.9474,
+        "pct_ci95_low": 29.3681,
+        "pct_ci95_high": 38.8479,
+        "pct_formula_above_observed": 76.3158
+      },
+      "Tanaka 2001": {
+        "n_tests": 380,
+        "n_people": 380,
+        "bias_bpm": 1.6496,
+        "bias_ci95_low": 0.7779,
+        "bias_ci95_high": 2.5212,
+        "mae_bpm": 6.8589,
+        "mae_ci95_low": 6.3027,
+        "mae_ci95_high": 7.4151,
+        "rmse_bpm": 8.8026,
+        "rmse_ci95_low": 8.1255,
+        "rmse_ci95_high": 9.5228,
+        "n_abs_error_over_10": 98,
+        "pct_abs_error_over_10": 25.7895,
+        "pct_ci95_low": 21.6486,
+        "pct_ci95_high": 30.415,
+        "pct_formula_above_observed": 58.4211
+      },
+      "Gellish 2007": {
+        "n_tests": 380,
+        "n_people": 380,
+        "bias_bpm": 1.2647,
+        "bias_ci95_low": 0.3935,
+        "bias_ci95_high": 2.136,
+        "mae_bpm": 6.8022,
+        "mae_ci95_low": 6.2499,
+        "mae_ci95_high": 7.3546,
+        "rmse_bpm": 8.7348,
+        "rmse_ci95_low": 8.0848,
+        "rmse_ci95_high": 9.4241,
+        "n_abs_error_over_10": 100,
+        "pct_abs_error_over_10": 26.3158,
+        "pct_ci95_low": 22.1412,
+        "pct_ci95_high": 30.9644,
+        "pct_formula_above_observed": 56.3158
+      }
+    },
+    "age_band=30 to 39": {
+      "220 minus age": {
+        "n_tests": 222,
+        "n_people": 222,
+        "bias_bpm": 0.7896,
+        "bias_ci95_low": -0.3661,
+        "bias_ci95_high": 1.9454,
+        "mae_bpm": 6.8023,
+        "mae_ci95_low": 6.0683,
+        "mae_ci95_high": 7.5362,
+        "rmse_bpm": 8.7818,
+        "rmse_ci95_low": 7.7756,
+        "rmse_ci95_high": 9.8118,
+        "n_abs_error_over_10": 49,
+        "pct_abs_error_over_10": 22.0721,
+        "pct_ci95_low": 17.1173,
+        "pct_ci95_high": 27.9769,
+        "pct_formula_above_observed": 56.3063
+      },
+      "Tanaka 2001": {
+        "n_tests": 222,
+        "n_people": 222,
+        "bias_bpm": -0.7121,
+        "bias_ci95_low": -1.8629,
+        "bias_ci95_high": 0.4387,
+        "mae_bpm": 6.7532,
+        "mae_ci95_low": 6.0205,
+        "mae_ci95_high": 7.4859,
+        "rmse_bpm": 8.7381,
+        "rmse_ci95_low": 7.687,
+        "rmse_ci95_high": 9.8733,
+        "n_abs_error_over_10": 47,
+        "pct_abs_error_over_10": 21.1712,
+        "pct_ci95_low": 16.3111,
+        "pct_ci95_high": 27.012,
+        "pct_formula_above_observed": 45.4955
+      },
+      "Gellish 2007": {
+        "n_tests": 222,
+        "n_people": 222,
+        "bias_bpm": -0.7623,
+        "bias_ci95_low": -1.9132,
+        "bias_ci95_high": 0.3886,
+        "mae_bpm": 6.7651,
+        "mae_ci95_low": 6.0333,
+        "mae_ci95_high": 7.497,
+        "rmse_bpm": 8.7431,
+        "rmse_ci95_low": 7.689,
+        "rmse_ci95_high": 9.7709,
+        "n_abs_error_over_10": 48,
+        "pct_abs_error_over_10": 21.6216,
+        "pct_ci95_low": 16.7137,
+        "pct_ci95_high": 27.4949,
+        "pct_formula_above_observed": 45.045
+      }
+    },
+    "age_band=40 and over": {
+      "220 minus age": {
+        "n_tests": 133,
+        "n_people": 133,
+        "bias_bpm": -3.1421,
+        "bias_ci95_low": -5.0689,
+        "bias_ci95_high": -1.2153,
+        "mae_bpm": 8.9406,
+        "mae_ci95_low": 7.6529,
+        "mae_ci95_high": 10.2283,
+        "rmse_bpm": 11.6826,
+        "rmse_ci95_low": 9.936,
+        "rmse_ci95_high": 13.4891,
+        "n_abs_error_over_10": 46,
+        "pct_abs_error_over_10": 34.5865,
+        "pct_ci95_low": 27.038,
+        "pct_ci95_high": 43.0003,
+        "pct_formula_above_observed": 39.0977
+      },
+      "Tanaka 2001": {
+        "n_tests": 133,
+        "n_people": 133,
+        "bias_bpm": -1.3717,
+        "bias_ci95_low": -3.2537,
+        "bias_ci95_high": 0.5104,
+        "mae_bpm": 8.6062,
+        "mae_ci95_low": 7.4123,
+        "mae_ci95_high": 9.8001,
+        "rmse_bpm": 11.076,
+        "rmse_ci95_low": 9.3948,
+        "rmse_ci95_high": 13.066,
+        "n_abs_error_over_10": 48,
+        "pct_abs_error_over_10": 36.0902,
+        "pct_ci95_low": 28.4245,
+        "pct_ci95_high": 44.5369,
+        "pct_formula_above_observed": 48.1203
+      },
+      "Gellish 2007": {
+        "n_tests": 133,
+        "n_people": 133,
+        "bias_bpm": -1.0946,
+        "bias_ci95_low": -2.974,
+        "bias_ci95_high": 0.7847,
+        "mae_bpm": 8.5846,
+        "mae_ci95_low": 7.3988,
+        "mae_ci95_high": 9.7704,
+        "rmse_bpm": 11.0296,
+        "rmse_ci95_low": 9.3937,
+        "rmse_ci95_high": 12.807,
+        "n_abs_error_over_10": 48,
+        "pct_abs_error_over_10": 36.0902,
+        "pct_ci95_low": 28.4245,
+        "pct_ci95_high": 44.5369,
+        "pct_formula_above_observed": 49.6241
+      }
+    },
+    "sex=female": {
+      "220 minus age": {
+        "n_tests": 102,
+        "n_people": 102,
+        "bias_bpm": 6.4618,
+        "bias_ci95_low": 4.6804,
+        "bias_ci95_high": 8.2431,
+        "mae_bpm": 8.9931,
+        "mae_ci95_low": 7.7007,
+        "mae_ci95_high": 10.2856,
+        "rmse_bpm": 11.1519,
+        "rmse_ci95_low": 9.8074,
+        "rmse_ci95_high": 12.5301,
+        "n_abs_error_over_10": 40,
+        "pct_abs_error_over_10": 39.2157,
+        "pct_ci95_low": 30.2975,
+        "pct_ci95_high": 48.9167,
+        "pct_formula_above_observed": 74.5098
+      },
+      "Tanaka 2001": {
+        "n_tests": 102,
+        "n_people": 102,
+        "bias_bpm": 3.0526,
+        "bias_ci95_low": 1.3577,
+        "bias_ci95_high": 4.7476,
+        "mae_bpm": 7.2015,
+        "mae_ci95_low": 6.0885,
+        "mae_ci95_high": 8.3144,
+        "rmse_bpm": 9.171,
+        "rmse_ci95_low": 7.9508,
+        "rmse_ci95_high": 10.326,
+        "n_abs_error_over_10": 27,
+        "pct_abs_error_over_10": 26.4706,
+        "pct_ci95_low": 18.8764,
+        "pct_ci95_high": 35.7727,
+        "pct_formula_above_observed": 62.7451
+      },
+      "Gellish 2007": {
+        "n_tests": 102,
+        "n_people": 102,
+        "bias_bpm": 2.8117,
+        "bias_ci95_low": 1.1185,
+        "bias_ci95_high": 4.505,
+        "mae_bpm": 7.1421,
+        "mae_ci95_low": 6.0415,
+        "mae_ci95_high": 8.2428,
+        "rmse_bpm": 9.0856,
+        "rmse_ci95_low": 7.8817,
+        "rmse_ci95_high": 10.3009,
+        "n_abs_error_over_10": 28,
+        "pct_abs_error_over_10": 27.451,
+        "pct_ci95_low": 19.7282,
+        "pct_ci95_high": 36.8106,
+        "pct_formula_above_observed": 60.7843
+      }
+    },
+    "sex=male": {
+      "220 minus age": {
+        "n_tests": 633,
+        "n_people": 633,
+        "bias_bpm": 2.4763,
+        "bias_ci95_low": 1.6928,
+        "bias_ci95_high": 3.2599,
+        "mae_bpm": 8.1009,
+        "mae_ci95_low": 7.5992,
+        "mae_ci95_high": 8.6027,
+        "rmse_bpm": 10.3431,
+        "rmse_ci95_low": 9.6811,
+        "rmse_ci95_high": 11.0278,
+        "n_abs_error_over_10": 184,
+        "pct_abs_error_over_10": 29.0679,
+        "pct_ci95_low": 25.6653,
+        "pct_ci95_high": 32.7231,
+        "pct_formula_above_observed": 61.7694
+      },
+      "Tanaka 2001": {
+        "n_tests": 633,
+        "n_people": 633,
+        "bias_bpm": -0.0396,
+        "bias_ci95_low": -0.7611,
+        "bias_ci95_high": 0.682,
+        "mae_bpm": 7.1338,
+        "mae_ci95_low": 6.6746,
+        "mae_ci95_high": 7.5929,
+        "rmse_bpm": 9.2475,
+        "rmse_ci95_low": 8.6,
+        "rmse_ci95_high": 9.9391,
+        "n_abs_error_over_10": 166,
+        "pct_abs_error_over_10": 26.2243,
+        "pct_ci95_low": 22.9486,
+        "pct_ci95_high": 29.7869,
+        "pct_formula_above_observed": 51.0269
+      },
+      "Gellish 2007": {
+        "n_tests": 633,
+        "n_people": 633,
+        "bias_bpm": -0.1912,
+        "bias_ci95_low": -0.9098,
+        "bias_ci95_high": 0.5275,
+        "mae_bpm": 7.1089,
+        "mae_ci95_low": 6.6518,
+        "mae_ci95_high": 7.5661,
+        "rmse_bpm": 9.2125,
+        "rmse_ci95_low": 8.5636,
+        "rmse_ci95_high": 9.8571,
+        "n_abs_error_over_10": 168,
+        "pct_abs_error_over_10": 26.5403,
+        "pct_ci95_low": 23.2495,
+        "pct_ci95_high": 30.114,
+        "pct_formula_above_observed": 50.237
+      }
+    }
+  },
+  "age_line_descriptive": {
+    "intercept": 202.9745,
+    "intercept_ci95": [
+      200.5507,
+      205.3983
+    ],
+    "slope_per_year": -0.5514,
+    "slope_ci95": [
+      -0.6299,
+      -0.4729
+    ],
+    "residual_sd_bpm": 9.1402,
+    "r2": 0.2346,
+    "n": 735,
+    "note": "descriptive line of this open table only; not proposed as a formula"
+  },
+  "zone_boundary_shift": {
+    "220 minus age|70": {
+      "mean_shift_bpm": 2.1206,
+      "ci95_low": 1.6133,
+      "ci95_high": 2.6279,
+      "median_shift_bpm": 2.52,
+      "p10_shift_bpm": -6.132,
+      "p90_shift_bpm": 10.92,
+      "pct_tests_shift_over_5bpm": 47.2109
+    },
+    "220 minus age|85": {
+      "mean_shift_bpm": 2.575,
+      "ci95_low": 1.959,
+      "ci95_high": 3.191,
+      "median_shift_bpm": 3.06,
+      "p10_shift_bpm": -7.446,
+      "p90_shift_bpm": 13.26,
+      "pct_tests_shift_over_5bpm": 57.0068
+    },
+    "Tanaka 2001|70": {
+      "mean_shift_bpm": 0.2727,
+      "ci95_low": -0.195,
+      "ci95_high": 0.7404,
+      "median_shift_bpm": 0.364,
+      "p10_shift_bpm": -7.735,
+      "p90_shift_bpm": 8.4462,
+      "pct_tests_shift_over_5bpm": 41.6327
+    },
+    "Tanaka 2001|85": {
+      "mean_shift_bpm": 0.3311,
+      "ci95_low": -0.2368,
+      "ci95_high": 0.899,
+      "median_shift_bpm": 0.442,
+      "p10_shift_bpm": -9.3925,
+      "p90_shift_bpm": 10.2561,
+      "pct_tests_shift_over_5bpm": 49.3878
+    },
+    "Gellish 2007|70": {
+      "mean_shift_bpm": 0.1579,
+      "ci95_low": -0.3079,
+      "ci95_high": 0.6237,
+      "median_shift_bpm": 0.2527,
+      "p10_shift_bpm": -7.7351,
+      "p90_shift_bpm": 8.2362,
+      "pct_tests_shift_over_5bpm": 42.0408
+    },
+    "Gellish 2007|85": {
+      "mean_shift_bpm": 0.1917,
+      "ci95_low": -0.3739,
+      "ci95_high": 0.7574,
+      "median_shift_bpm": 0.3069,
+      "p10_shift_bpm": -9.3927,
+      "p90_shift_bpm": 10.0011,
+      "pct_tests_shift_over_5bpm": 49.932
+    }
+  },
+  "zone_discordance": {
+    "220 minus age": {
+      "n_tests": 735,
+      "effort_hours": 134.5344,
+      "mean_pct_time_discordant": 14.7117,
+      "ci95_low": 13.7252,
+      "ci95_high": 15.6981,
+      "median_pct_time_discordant": 10.8696,
+      "pct_tests_over_10pct_time_discordant": 52.7891,
+      "mean_pct_time_formula_lower_zone": 10.8876,
+      "lower_ci95": "9.84884 to 11.9263",
+      "mean_pct_time_formula_higher_zone": 3.8241,
+      "higher_ci95": "3.24921 to 4.39898",
+      "pooled_pct_time_discordant": 14.5586,
+      "pooled_pct_time_observed_below 70%": 24.5288,
+      "pooled_pct_time_observed_70 to 85%": 29.223,
+      "pooled_pct_time_observed_above 85%": 46.2482,
+      "pooled_pct_time_formula_below 70%": 26.9815,
+      "pooled_pct_time_formula_70 to 85%": 31.2599,
+      "pooled_pct_time_formula_above 85%": 41.7586
+    },
+    "Tanaka 2001": {
+      "n_tests": 735,
+      "effort_hours": 134.5344,
+      "mean_pct_time_discordant": 12.3723,
+      "ci95_low": 11.5319,
+      "ci95_high": 13.2127,
+      "median_pct_time_discordant": 8.9844,
+      "pct_tests_over_10pct_time_discordant": 46.6667,
+      "mean_pct_time_formula_lower_zone": 7.3977,
+      "lower_ci95": "6.54364 to 8.2517",
+      "mean_pct_time_formula_higher_zone": 4.9746,
+      "higher_ci95": "4.37248 to 5.57675",
+      "pooled_pct_time_discordant": 12.1945,
+      "pooled_pct_time_observed_below 70%": 24.5288,
+      "pooled_pct_time_observed_70 to 85%": 29.223,
+      "pooled_pct_time_observed_above 85%": 46.2482,
+      "pooled_pct_time_formula_below 70%": 25.332,
+      "pooled_pct_time_formula_70 to 85%": 29.783,
+      "pooled_pct_time_formula_above 85%": 44.885
+    },
+    "Gellish 2007": {
+      "n_tests": 735,
+      "effort_hours": 134.5344,
+      "mean_pct_time_discordant": 12.2901,
+      "ci95_low": 11.4598,
+      "ci95_high": 13.1204,
+      "median_pct_time_discordant": 8.9888,
+      "pct_tests_over_10pct_time_discordant": 46.2585,
+      "mean_pct_time_formula_lower_zone": 7.2265,
+      "lower_ci95": "6.38304 to 8.07001",
+      "mean_pct_time_formula_higher_zone": 5.0636,
+      "higher_ci95": "4.46229 to 5.66484",
+      "pooled_pct_time_discordant": 12.1018,
+      "pooled_pct_time_observed_below 70%": 24.5288,
+      "pooled_pct_time_observed_70 to 85%": 29.223,
+      "pooled_pct_time_observed_above 85%": 46.2482,
+      "pooled_pct_time_formula_below 70%": 25.2469,
+      "pooled_pct_time_formula_70 to 85%": 29.6766,
+      "pooled_pct_time_formula_above 85%": 45.0764
+    }
+  },
+  "figure_titles": {
+    "fig01": "Deposit audit: page versus files, flagged and not corrected",
+    "fig02": "Effort phase rule, fixed before results (schematic, not participant data)",
+    "fig03": "Age-predicted HRmax minus observed HRpeak, adults, first test",
+    "fig04": "Observed HRpeak by age band and three formulas",
+    "fig05": "Zone discordance: effort time labelled in a different zone",
+    "fig06": "Sensitivity of formula bias and MAE to sample and peak definitions"
+  },
+  "figure_footer": "Re-analysis of Mongin, García Romero and Alvero Cruz 2021, PhysioNet, doi 10.13026/7ezk-j442. Aggregates only, no individual rows.",
+  "outputs": {
+    "tables": [
+      "t01_page_vs_files.csv",
+      "t02_audit_flags.csv",
+      "t03_missingness.csv",
+      "t04_samples.csv",
+      "t05_effort_phase_flags.csv",
+      "t06_primary_descriptors.csv",
+      "t07_primary_formula_error.csv",
+      "t08_sensitivity_formula_error.csv",
+      "t09_under18_descriptive_formula_error.csv",
+      "t10_primary_by_age_band_and_sex.csv",
+      "t11_observed_hrpeak_by_age_band.csv",
+      "t12_zone_boundary_shift.csv",
+      "t13_zone_discordance.csv"
+    ],
+    "figures": [
+      "fig01_deposit_audit.png",
+      "fig01_deposit_audit.webp",
+      "fig02_effort_phase_rule.png",
+      "fig02_effort_phase_rule.webp",
+      "fig03_formula_error.png",
+      "fig03_formula_error.webp",
+      "fig04_hrpeak_by_age_band.png",
+      "fig04_hrpeak_by_age_band.webp",
+      "fig05_zone_discordance.png",
+      "fig05_zone_discordance.webp",
+      "fig06_sensitivity.png",
+      "fig06_sensitivity.webp"
+    ]
+  }
+}

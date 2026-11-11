@@ -1,0 +1,6 @@
+sample,tests,people,female_tests,age_min,age_max,gas_available_tests
+primary,735,735,102,18,63,726
+all_adult_tests,847,737,120,18,63,838
+first_adult_test,737,737,104,18,63,728
+primary_regular_protocol,687,687,91,18,63,678
+under18_first_test,122,122,29,10.8,17.9,120

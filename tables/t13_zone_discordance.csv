@@ -1,0 +1,4 @@
+formula,n_tests,effort_hours,mean_pct_time_discordant,ci95_low,ci95_high,median_pct_time_discordant,pct_tests_over_10pct_time_discordant,mean_pct_time_formula_lower_zone,lower_ci95,mean_pct_time_formula_higher_zone,higher_ci95,pooled_pct_time_discordant,pooled_pct_time_observed_below 70%,pooled_pct_time_observed_70 to 85%,pooled_pct_time_observed_above 85%,pooled_pct_time_formula_below 70%,pooled_pct_time_formula_70 to 85%,pooled_pct_time_formula_above 85%
+220 minus age,735,134.534,14.7117,13.7252,15.6981,10.8696,52.7891,10.8876,9.84884 to 11.9263,3.82409,3.24921 to 4.39898,14.5586,24.5288,29.223,46.2482,26.9815,31.2599,41.7586
+Tanaka 2001,735,134.534,12.3723,11.5319,13.2127,8.98438,46.6667,7.39767,6.54364 to 8.2517,4.97462,4.37248 to 5.57675,12.1945,24.5288,29.223,46.2482,25.332,29.783,44.885
+Gellish 2007,735,134.534,12.2901,11.4598,13.1204,8.98876,46.2585,7.22652,6.38304 to 8.07001,5.06357,4.46229 to 5.66484,12.1018,24.5288,29.223,46.2482,25.2469,29.6766,45.0764

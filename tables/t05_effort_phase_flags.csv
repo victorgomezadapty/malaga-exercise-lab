@@ -1,0 +1,8 @@
+flag,tests_all,tests_primary
+flag_warmup_not_5kmh,57,37
+flag_effort_short,2,1
+flag_drop_inside_effort,1,1
+flag_no_recovery,0,0
+flag_recovery_not_5kmh,15,11
+any irregular flag,72,48
+max HR any time above effort max,128,102
